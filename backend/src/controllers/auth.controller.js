@@ -37,7 +37,7 @@ export const signup = async (req, res) => {
                 _id: newUser._id,
                 fullName: newUser.fullName,
                 email: newUser.email,
-                profilPic: newUser.profilPic 
+                profilePic: newUser.profilePic 
             })
         } else {
             res.status(400).json({ message: "Donneés utilisateur non valides" });
@@ -68,7 +68,7 @@ export const login = async (req, res) => {
             _id: user._id,
             fullName: user.fullName,
             email: user.email,
-            profilPic: user.profilPic 
+            profilePic: user.profilePic 
         })
     } catch (error) {
         console.log("Erreur dans le contrôleur de connexion", error.message);
